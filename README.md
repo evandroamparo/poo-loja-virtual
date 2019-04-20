@@ -4,6 +4,6 @@ Projeto criado para a palestra sobre Programação Orientada a Objetos no dia a 
 
 Slides: (link)
 
-Para executar, instale o .Net Core SDK e digite no prompot de comando:
+Para executar, instale o .Net Core SDK e digite no prompt de comando:
 
 `dotnet run`
