@@ -11,7 +11,7 @@ namespace PooLojaVirtual.Controllers
 {
     public class HomeController : Controller
     {
-        private IRepositorio<Produto> _repositorio;
+        private readonly IRepositorio<Produto> _repositorio;
 
         public HomeController(IRepositorio<Produto> repositorio)
         {

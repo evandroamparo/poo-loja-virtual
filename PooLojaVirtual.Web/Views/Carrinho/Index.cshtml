@@ -1,0 +1,19 @@
+@model Carrinho
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul class="list-group">
+
+@foreach (var item in Model.Itens)
+{
+    <li class="list-group-item">item.Produto.Nome</li>
+}
+
+@if (Model.Itens.Count == 0)
+{
+    <p class="text-center">Seu Carrinho está vazio</p>
+    <p class="text-center"><a asp-controller="Home" asp-action="Index">Continuar comprando</a></p>
+}
+</ul>
