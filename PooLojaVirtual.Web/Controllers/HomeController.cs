@@ -4,15 +4,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PooLojaVirtual.Data;
 using PooLojaVirtual.Models;
 
 namespace PooLojaVirtual.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepositorio<Produto> _repositorio;
+
+        public HomeController(IRepositorio<Produto> repositorio)
+        {
+            _repositorio = repositorio;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            return View(_repositorio.GetAll());
         }
 
         public IActionResult Privacy()

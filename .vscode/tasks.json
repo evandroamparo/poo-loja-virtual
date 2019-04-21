@@ -15,7 +15,7 @@
         },
         {
             "label": "run",
-            "command": "dotnet run",
+            "command": "dotnet run --project PooLojaVirtual.Web",
             "type": "shell",
             "group": "build",
             "presentation": {
