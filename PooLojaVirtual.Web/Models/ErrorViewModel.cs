@@ -1,6 +1,6 @@
 using System;
 
-namespace poo_loja_virtual.Models
+namespace PooLojaVirtual.Models
 {
     public class ErrorViewModel
     {

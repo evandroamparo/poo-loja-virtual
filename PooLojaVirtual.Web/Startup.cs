@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace poo_loja_virtual
+namespace PooLojaVirtual
 {
     public class Startup
     {

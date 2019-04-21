@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>poo_loja_virtual</RootNamespace>
+    <RootNamespace>PooLojaVirtual</RootNamespace>
   </PropertyGroup>
 
 

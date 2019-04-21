@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using poo_loja_virtual.Models;
+using PooLojaVirtual.Models;
 
-namespace poo_loja_virtual.Controllers
+namespace PooLojaVirtual.Controllers
 {
     public class HomeController : Controller
     {
