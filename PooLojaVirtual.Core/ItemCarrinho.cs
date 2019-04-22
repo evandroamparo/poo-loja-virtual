@@ -12,8 +12,8 @@ namespace PooLojaVirtual.Models
         {
             
         }
-        public Produto Produto { get; private set; }
-        public int Quantidade { get; private set; }
+        public Produto Produto { get; set; }
+        public int Quantidade { get; set; }
 
         public double Subtotal
         {
