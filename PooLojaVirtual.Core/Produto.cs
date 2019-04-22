@@ -2,7 +2,7 @@
 
 namespace PooLojaVirtual.Models
 {
-    public class Produto
+    public class Produto : Entidade
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }

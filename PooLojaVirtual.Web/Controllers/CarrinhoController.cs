@@ -2,26 +2,33 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PooLojaVirtual.Data;
 using PooLojaVirtual.Models;
+using PooLojaVirtual.Core;
 
 namespace PooLojaVirtual.Web.Controllers
 {
     public class CarrinhoController : Controller
     {
-        private readonly IRepositorio<Carrinho> _repositorio;
+        private readonly IRepositorio<Produto> _repositorio;
+        private readonly IGerenciadorCarrinho _gerenciagorCarrinho;
 
-        public CarrinhoController(IRepositorio<Carrinho> repositorio)
+        public CarrinhoController(IRepositorio<Produto> repositorio, IGerenciadorCarrinho gerenciagorCarrinho)
         {
             _repositorio = repositorio;
+            _gerenciagorCarrinho = gerenciagorCarrinho;
         }
 
         public IActionResult Index()
         {
-            var carrinho = _repositorio.GetAll().FirstOrDefault();
-            if (carrinho == null)
-            {
-                carrinho = new Carrinho();
-            }
-            return View(carrinho);
+            return View(_gerenciagorCarrinho.RecuperarCarrinho());
+        }
+
+        public IActionResult Adicionar(int id)
+        {
+            var produto = _repositorio.RecuperarPorId(id);
+            var carrinho = _gerenciagorCarrinho.RecuperarCarrinho();
+            carrinho.Adicionar(produto, 1);
+            _gerenciagorCarrinho.Salvar(carrinho);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
