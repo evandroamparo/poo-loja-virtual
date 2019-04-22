@@ -50,7 +50,7 @@ namespace PooLojaVirtual.Web.Controllers
             };
             _repositorioPedidos.Inserir(pedido);
             _gerenciagorCarrinho.ApagarCarrinho();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Pedidos");
         }
     }
 }
