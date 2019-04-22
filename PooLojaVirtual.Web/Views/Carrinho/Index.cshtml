@@ -38,7 +38,7 @@ else
                   <td data-th="Quantidade" class="text-center">@item.Quantidade</td>
                   <td data-th="Subtotal" class="text-center">$@item.Subtotal</td>
                   <td class="actions" data-th="">
-                      <button class="btn btn-danger btn-sm">x</button>
+                      <a asp-action="Remover" asp-controller="Carrinho" asp-route-id="@item.Produto.Id" class="btn btn-danger btn-sm">x</a>
                   </td>
               </tr>
           }

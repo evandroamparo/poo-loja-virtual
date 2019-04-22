@@ -30,5 +30,13 @@ namespace PooLojaVirtual.Web.Controllers
             _gerenciagorCarrinho.Salvar(carrinho);
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Remover(int id)
+        {
+            var carrinho = _gerenciagorCarrinho.RecuperarCarrinho();
+            carrinho.Remover(id);
+            _gerenciagorCarrinho.Salvar(carrinho);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
