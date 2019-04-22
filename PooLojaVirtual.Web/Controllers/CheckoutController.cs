@@ -52,7 +52,7 @@ namespace PooLojaVirtual.Web.Controllers
                 Valor = carrinho.Total
             };
             _repositorioPedidos.Inserir(pedido);
-            _servicoEmail.EnviarConfirmacao("evandro.amparo@gmail.com", pedido);
+            _servicoEmail.EnviarConfirmacao("cliente@gmail.com", pedido);
             _gerenciagorCarrinho.LimparCarrinho();
             return RedirectToAction("Index", "Pedidos");
         }
