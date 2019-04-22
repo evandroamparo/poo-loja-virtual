@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PooLojaVirtual.Data;
 using PooLojaVirtual.Models;
@@ -15,7 +16,7 @@ namespace PooLojaVirtual.Web.Controllers
 
         public IActionResult Index()
         {
-            var pedidos = _repositorioPedidos.GetAll();
+            var pedidos = _repositorioPedidos.GetAll().OrderByDescending(p => p.Data);
             return View(pedidos);
         }
     }

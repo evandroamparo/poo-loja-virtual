@@ -39,12 +39,12 @@ namespace PooLojaVirtual.Web.Controllers
             return View(checkoutVM);
         }
 
-        public IActionResult Confirmar(FormaPagamento formaPagamento)
+        public IActionResult Confirmar(int idFormaPagamento)
         {
             var carrinho = _gerenciagorCarrinho.RecuperarCarrinho();
             var pedido = new Pedido
             {
-                FormaPagamento = formaPagamento,
+                FormaPagamento = _repositorioFormasPagamento.RecuperarPorId(idFormaPagamento),
                 Itens = carrinho.Itens,
                 Valor = carrinho.Total
             };
