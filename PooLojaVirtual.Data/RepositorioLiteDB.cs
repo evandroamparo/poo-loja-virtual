@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using LiteDB;
+using PooLojaVirtual.Models;
 
 namespace PooLojaVirtual.Data
 {
-    public class RepositorioLiteDB<T> : IRepositorio<T>
+    public class RepositorioLiteDB<T> : IRepositorio<T> where T: Entidade
     {
         private LiteRepository _db;
 
@@ -11,7 +13,12 @@ namespace PooLojaVirtual.Data
         {
             _db = new LiteRepository("loja.db");
         }
-        
+
+        public void Excluir(T entidade)
+        {
+            _db.Delete<T>(entidade.Id);
+        }
+
         public IEnumerable<T> GetAll()
         {
             return _db.Query<T>().ToEnumerable();

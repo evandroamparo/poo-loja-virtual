@@ -6,5 +6,6 @@ namespace PooLojaVirtual.Core
     {
          Carrinho RecuperarCarrinho();
         void Salvar(Carrinho carrinho);
+        void ApagarCarrinho();
     }
 }

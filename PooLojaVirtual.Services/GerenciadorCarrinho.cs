@@ -14,6 +14,11 @@ namespace PooLojaVirtual.Services
             _repositorio = repositorio;
         }
 
+        public void ApagarCarrinho()
+        {
+            _repositorio.Excluir(RecuperarCarrinho());
+        }
+
         public Carrinho RecuperarCarrinho()
         {
             var carrinho = _repositorio.GetAll().FirstOrDefault();
