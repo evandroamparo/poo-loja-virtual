@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using PooLojaVirtual.Core;
-using PooLojaVirtual.Data;
 using PooLojaVirtual.Models;
 
 namespace PooLojaVirtual.Services
@@ -14,7 +13,7 @@ namespace PooLojaVirtual.Services
             _repositorio = repositorio;
         }
 
-        public void ApagarCarrinho()
+        public void LimparCarrinho()
         {
             _repositorio.Excluir(RecuperarCarrinho());
         }

@@ -1,6 +1,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using PooLojaVirtual.Data;
+using PooLojaVirtual.Core;
+using PooLojaVirtual.Infraestructure;
 using PooLojaVirtual.Models;
 
 namespace PooLojaVirtual.Web.Controllers

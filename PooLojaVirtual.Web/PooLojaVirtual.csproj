@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PooLojaVirtual.Core\PooLojaVirtual.Core.csproj" />
-    <ProjectReference Include="..\PooLojaVirtual.Data\PooLojaVirtual.Data.csproj" />
     <ProjectReference Include="..\PooLojaVirtual.Services\PooLojaVirtual.Services.csproj" />
+    <ProjectReference Include="..\PooLojaVirtual.Infraestructure\PooLojaVirtual.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>

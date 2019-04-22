@@ -1,8 +1,9 @@
 using System;
 using System.Linq;
+using PooLojaVirtual.Core;
 using PooLojaVirtual.Models;
 
-namespace PooLojaVirtual.Data
+namespace PooLojaVirtual.Infraestructure
 {
     public class Inicializacao
     {

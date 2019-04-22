@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using LiteDB;
+using PooLojaVirtual.Core;
 using PooLojaVirtual.Models;
 
-namespace PooLojaVirtual.Data
+namespace PooLojaVirtual.Infraestructure
 {
     public class RepositorioLiteDB<T> : IRepositorio<T> where T: Entidade
     {

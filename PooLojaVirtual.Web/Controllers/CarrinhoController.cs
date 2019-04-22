@@ -1,6 +1,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using PooLojaVirtual.Data;
+using PooLojaVirtual.Infraestructure;
 using PooLojaVirtual.Models;
 using PooLojaVirtual.Core;
 

@@ -2,7 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PooLojaVirtual.Core;
-using PooLojaVirtual.Data;
+using PooLojaVirtual.Infraestructure;
 using PooLojaVirtual.Models;
 using PooLojaVirtual.Web.ViewModels;
 
@@ -13,15 +13,18 @@ namespace PooLojaVirtual.Web.Controllers
         private readonly IGerenciadorCarrinho _gerenciagorCarrinho;
         private readonly IRepositorio<FormaPagamento> _repositorioFormasPagamento;
         private readonly IRepositorio<Pedido> _repositorioPedidos;
+        private readonly IServicoEmail _servicoEmail;
 
         public CheckoutController(
             IRepositorio<FormaPagamento> repositorioFormasPagamento,
             IRepositorio<Pedido> repositorioPedidos,
-            IGerenciadorCarrinho gerenciagorCarrinho)
+            IGerenciadorCarrinho gerenciagorCarrinho,
+            IServicoEmail servicoEmail)
         {
             _gerenciagorCarrinho = gerenciagorCarrinho;
             _repositorioFormasPagamento = repositorioFormasPagamento;
             _repositorioPedidos = repositorioPedidos;
+            _servicoEmail = servicoEmail;
         }
 
         public IActionResult Index()
@@ -49,7 +52,8 @@ namespace PooLojaVirtual.Web.Controllers
                 Valor = carrinho.Total
             };
             _repositorioPedidos.Inserir(pedido);
-            _gerenciagorCarrinho.ApagarCarrinho();
+            _servicoEmail.EnviarConfirmacao("evandro.amparo@gmail.com", pedido);
+            _gerenciagorCarrinho.LimparCarrinho();
             return RedirectToAction("Index", "Pedidos");
         }
     }

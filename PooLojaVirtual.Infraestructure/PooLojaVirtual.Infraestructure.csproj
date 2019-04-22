@@ -2,7 +2,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PooLojaVirtual.Core\PooLojaVirtual.Core.csproj" />
-    <ProjectReference Include="..\PooLojaVirtual.Infraestructure\PooLojaVirtual.Infraestructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
   </ItemGroup>
 
   <PropertyGroup>

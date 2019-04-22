@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using PooLojaVirtual.Models;
 
-namespace PooLojaVirtual.Data
+namespace PooLojaVirtual.Core
 {
     public interface IRepositorio<T>
     {
