@@ -4,6 +4,9 @@ Projeto criado para a palestra sobre Programação Orientada a Objetos no dia a 
 
 Slides: https://www.slideshare.net/evandroamparo/orientao-a-objetos-no-dia-a-dia-do-programador
 
-Para executar, instale o .Net Core SDK em https://dotnet.microsoft.com/download e digite no prompt de comando, dentro da pasta principal:
+Para executar:
+
+  - Instale o .Net Core SDK em https://dotnet.microsoft.com/download 
+  - No prompt de comando, dentro da pasta PooLojaVirtual.Web, digite:
 
 `dotnet run`
