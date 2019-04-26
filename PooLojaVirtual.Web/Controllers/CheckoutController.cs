@@ -10,7 +10,7 @@ namespace PooLojaVirtual.Web.Controllers
 {
     public class CheckoutController : Controller
     {
-        private readonly IGerenciadorCarrinho _gerenciagorCarrinho;
+        private readonly IGerenciadorCarrinho _gerenciadorCarrinho;
         private readonly IRepositorio<FormaPagamento> _repositorioFormasPagamento;
         private readonly IRepositorio<Pedido> _repositorioPedidos;
         private readonly IServicoEmail _servicoEmail;
@@ -18,10 +18,10 @@ namespace PooLojaVirtual.Web.Controllers
         public CheckoutController(
             IRepositorio<FormaPagamento> repositorioFormasPagamento,
             IRepositorio<Pedido> repositorioPedidos,
-            IGerenciadorCarrinho gerenciagorCarrinho,
+            IGerenciadorCarrinho gerenciadorCarrinho,
             IServicoEmail servicoEmail)
         {
-            _gerenciagorCarrinho = gerenciagorCarrinho;
+            _gerenciadorCarrinho = gerenciadorCarrinho;
             _repositorioFormasPagamento = repositorioFormasPagamento;
             _repositorioPedidos = repositorioPedidos;
             _servicoEmail = servicoEmail;
@@ -29,7 +29,7 @@ namespace PooLojaVirtual.Web.Controllers
 
         public IActionResult Index()
         {
-            var carrinho = _gerenciagorCarrinho.RecuperarCarrinho();
+            var carrinho = _gerenciadorCarrinho.RecuperarCarrinho();
             var checkoutVM = new CheckoutViewModel
             {
                 NumItens = carrinho.Itens.Count(),
@@ -44,7 +44,7 @@ namespace PooLojaVirtual.Web.Controllers
 
         public IActionResult Confirmar(int idFormaPagamento)
         {
-            var carrinho = _gerenciagorCarrinho.RecuperarCarrinho();
+            var carrinho = _gerenciadorCarrinho.RecuperarCarrinho();
             var pedido = new Pedido
             {
                 FormaPagamento = _repositorioFormasPagamento.RecuperarPorId(idFormaPagamento),
@@ -53,7 +53,7 @@ namespace PooLojaVirtual.Web.Controllers
             };
             _repositorioPedidos.Inserir(pedido);
             _servicoEmail.EnviarConfirmacao("cliente@gmail.com", pedido);
-            _gerenciagorCarrinho.LimparCarrinho();
+            _gerenciadorCarrinho.LimparCarrinho();
             return RedirectToAction("Index", "Pedidos");
         }
     }
