@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooLojaVirtual.Services", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooLojaVirtual.Infraestructure", "PooLojaVirtual.Infraestructure\PooLojaVirtual.Infraestructure.csproj", "{7CD54E78-17D6-4FFF-B77C-B52EFB169E40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooLojaVirtual.Tests", "PooLojaVirtual.Tests\PooLojaVirtual.Tests.csproj", "{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,17 @@ Global
 		{7CD54E78-17D6-4FFF-B77C-B52EFB169E40}.Release|x64.Build.0 = Release|Any CPU
 		{7CD54E78-17D6-4FFF-B77C-B52EFB169E40}.Release|x86.ActiveCfg = Release|Any CPU
 		{7CD54E78-17D6-4FFF-B77C-B52EFB169E40}.Release|x86.Build.0 = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|x64.Build.0 = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|x64.ActiveCfg = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|x64.Build.0 = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BE8EA407-E9DE-4E0A-ACA8-A686F7B3349A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
